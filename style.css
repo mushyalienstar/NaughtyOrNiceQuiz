@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+@font-face {
+    font-family: 'TheSans';
+    src: url('path-to-font-files/TheSans-Regular.woff2') format('woff2'),
+         url('path-to-font-files/TheSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'TheSans', 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1b3c1a;
+    font-family: 'TheSans', 'Open Sans', sans-serif;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.app {
+    background: #fff;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 5px solid #d32f2f;
+    font-family: 'TheSans', 'Open Sans', sans-serif;
+}
+
+.app h1 {
+    font-size: 28px;
+    text-align: center;
+    color: #d32f2f;
+    font-weight: 700;
+    border-bottom: 2px solid #000;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    font-family: 'TheSans', 'Open Sans', sans-serif;
+}
+
+.quiz h2 {
+    font-size: 20px;
+    color: #388e3c;
+    font-weight: 600;
+    font-family: 'TheSans', 'Open Sans', sans-serif;
+}
+
+.btn {
+    background: #f9f9f9;
+    color: #000;
+    font-weight: 400;
+    width: 100%;
+    border: 1px solid #d32f2f;
+    padding: 12px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'TheSans', 'Open Sans', sans-serif;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background: #d32f2f;
+    color: #fff;
+    border: 1px solid #d32f2f;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#submit-btn {
+    background: #388e3c;
+    color: #fff;
+    font-weight: 600;
+    width: 150px;
+    border: 0;
+    padding: 12px;
+    margin: 30px auto 0;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    transition: background 0.3s;
+    font-family: 'TheSans', 'Open Sans', sans-serif;
+}
+
+#submit-btn:hover {
+    background: #2e7d32;
+}
+
+.question {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-family: 'TheSans', 'Open Sans', sans-serif;
+}
+
+#question-count {
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'TheSans', 'Open Sans', sans-serif;
+}
+
+.question-image {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    height: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes twinkle {
+    0% { opacity: 2; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.christmas-lights {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;  
+    background-image: url('lights.png');  
+    background-repeat: repeat-x;
+    background-size: contain;
+    z-index: -1;
+    animation: twinkle 2s infinite ease-in-out;
+}
